@@ -75,6 +75,7 @@ nav ul li a{
     border-bottom: 1px solid peru;
     padding: 0.5rem 1rem;
     outline: none;
+    cursor: pointer;
 }
 
 .content__pic{
@@ -105,15 +106,21 @@ nav ul li a{
     justify-content: flex-end;
     align-content: flex-end;
     font-size: 1.5rem;
+    letter-spacing: 0.5rem;
 
 }
-
+.footer__social > a:hover{
+    color:peru;
+}
+.cover-start{
+    transform: translateY(100%);
+}
 .cover{
     display: grid;
     grid-template-columns:repeat(4,25%);
     width: 100%;
     height: 85vh;
-    z-index: 10;
+    /* z-index: 10; */
     overflow: hidden;
     color: rgb(34, 59, 136);
     position: absolute;
@@ -131,6 +138,9 @@ nav ul li a{
     display: flex;
     flex-direction: row;
     
+}
+.cover > div ~ span{
+    display: inline-block;
 }
 .cover-div-3-span:hover,
 .cover-div-1-span:hover,
@@ -185,4 +195,180 @@ nav ul li a{
    -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
    transition: all 300ms ease-in-out;
    
+}
+.cover-location{
+    display: grid;
+    grid-template-rows: repeat(8,12.5%);
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    top: 15vh;
+    left: 0px;
+    overflow: hidden;
+    background-color: #D8DBE2;
+    
+    
+}
+
+.cover-location-start{
+    transform: translateX(100%);
+}
+.cover__location-div-0,
+.cover__location-div-2,
+.cover__location-div-4,
+.cover__location-div-6{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color:black;
+    clip-path: polygon(0% 0%, 0% 100%, 5% 100%, 5% 5%, 95% 5%, 95% 95%, 5% 95%, 5% 100%, 100% 100%, 100% 0%);
+    text-align: left;
+    font-size: 3rem;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+}
+.cover__location-div-1,
+.cover__location-div-3,
+.cover__location-div-5,
+.cover__location-div-7{
+    padding-left: 1rem;
+    background-color:black;
+    text-align: left;
+    font-size: 3rem;
+    color: white;
+    clip-path: polygon(0% 0%, 0% 100%, 5% 100%, 5% 5%, 95% 5%, 95% 95%, 5% 95%, 5% 100%, 100% 100%, 100% 0%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.cover-location > div ~ span{
+    text-transform: uppercase;
+    font-size: 2rem;
+    
+}
+/* .cover-location > div{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(228, 155, 228);
+    
+}
+.cover-location:nth-child(odd){
+    transform: translateX(100%);
+}
+.cover-location:nth-child(even){
+    transform: translateX(-1000px);
+} */
+.location-images{
+    position: absolute;
+    top: 15%;
+    width: unset;
+    width:80%;
+    height:auto;
+    margin: 0;
+    margin-left: 15rem;
+    margin-right: 20rem;
+    background-color:#D8DBE2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    grid-gap: 1rem;
+    opacity: 0;
+}
+
+.location-1{
+ background: url(./images/istanbul.jpg);
+ box-shadow: inset 0 0 10px 100px rgba(205, 134, 63, 0.75);
+ /* background-size: 20rem 20rem; */
+ background-size: 100%;
+ background-repeat: no-repeat;
+ position: relative;
+}
+.location-2{
+    background: url(./images/kuala-lumpur.jpg);
+    box-shadow: inset 0 0 10px 100px rgba(205, 134, 63, 0.75);
+    /* background-size: 20rem 20rem; */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.location-3{
+    background: url(./images/amsterdam.jpg);
+    box-shadow: inset 0 0 10px 100px rgba(205, 134, 63, 0.75);
+    /* background-size: 20rem 20rem; */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.location-4{
+    background: url(./images/rome.jpg);
+    box-shadow: inset 0 0 10px 100px rgba(205, 134, 63, 0.75);
+    /* background-size: 20rem 20rem; */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.image{
+    width: 100%;
+    height: 17rem;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image:hover{
+    box-shadow: inset 0 0 0 0 rgba(205, 134, 63, 0.75);
+}
+.location-label{
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    font-size: 3rem;
+    transition: 0.5s;
+}
+
+.image:hover .location-label{
+    font-size: 0px;
+    border: none;
+}
+
+.location-1::after{
+    width: 100%;
+    height: 55px;
+    content: 'street : 52 no:18 beyoglu Galata   phone: +90 212 525 54 29';
+    color:transparent;
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 2rem;
+    padding: 10px;
+    text-align: right;
+    text-transform: capitalize;
+}
+.location-2::after{
+    width: 100%;
+    height: 50px;
+    content: 'Kuala lumpur pavillion third floor no:17 phone:+60 10 525 4254';
+    color:transparent;
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 2rem;
+    padding: 10px;
+    text-align: right;
+    text-transform: capitalize;
+}
+
+.location-1:hover::after,
+.location-2:hover::after{
+    color: black;
+    transition: 1s;
 }
