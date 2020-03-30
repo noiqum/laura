@@ -48,6 +48,12 @@ function rota(){
                 
             }
         },7000);
+
+            //location section close button function--start---
+       
+
+
+
         //moving block action---end----
         
         //location images div action---start---
@@ -57,9 +63,18 @@ function rota(){
             gsap.to('.location-images',{opacity:1,duration:2,ease:'power3.easeinout'})
         },8000);
     }
+
+    const closeButton =document.querySelector(".cover__location-div-0");
+    closeButton.addEventListener('click',closeLocation);
+
+    function closeLocation(){
+        locationCover.classList.add('cover-location-start');
+        locationCover.classList.remove('cover-location');
+    };
     
 }
 
+// products link at navbar action start-------------
 let products=document.getElementById('products');
 let cover=document.getElementById('section-cover');
 products.addEventListener('click',menu);
